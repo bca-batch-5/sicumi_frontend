@@ -56,20 +56,21 @@ export const SectionRight = styled.section`
   width: 60%;
   height: 70vh;
   margin-right: 10%;
-  background-color: white;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid white;
-  border-radius: 25px;
-  padding: 40px;
+  // background-color: white;
+  // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  // border: 1px solid white;
+  // border-radius: 25px;
+  // padding: 40px;
 `;
 
 export const DescAcc = styled.section`
   display: flex;
   flex-direction: column;
+  padding-left: 5px;
 `;
 export const NameAcc = styled.h2`
   /* color: #7950f2; */
-  font-size: 18px;
+  font-size: 17px;
   margin: 0;
 `;
 export const PhoneAcc = styled.p`
@@ -104,7 +105,7 @@ export const Footer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 14px;
   color: #efefef;
 `;
 export const RightFooter = styled.section`
@@ -128,14 +129,14 @@ export const List = styled.section`
   color: #dadada;
   opacity: 60%;
   margin-top: 40px;
-  padding-top: 10px;
-  padding-left: 20px;
+  padding-left: 20%;
   margin: 10px;
 
   &:hover,
   &:focus,
   &:active {
     opacity: 100%;
+    color : #5f3dc4;
     border-left: 5px solid #5f3dc4;
   }
 `;
