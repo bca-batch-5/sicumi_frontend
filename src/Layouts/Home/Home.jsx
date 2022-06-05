@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 import { Wrapper, SectionRight, DescAcc, Nav, NavLeft, SectionLeft, Main, Footer, RightFooter, LeftFooter, NavRight, NavContainer, Hlogo, NameAcc, PhoneAcc, ListMenu, List } from "./StyleHome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightFromBracket, faArrowUp, faBell, faChartColumn, faPlus, faUser } from "@fortawesome/free-solid-svg-icons";
-import DetailsInformation from "../../Components/TextBox/DetailsInformation";
-import ContactInformation from "../../Components/TextBox/ContactInformation";
 const LayoutHome = (props) => {
   const { children } = props;
   return (
@@ -19,7 +17,7 @@ const LayoutHome = (props) => {
           </NavLeft>
           <NavRight>
             <Link to="" style={{ textDecoration: "none" }}>
-              <img src={profilepict} alt="none" width={50} style={{ borderRadius: `10px` }} />
+              <img src={profilepict} alt="none" width={50} style={{ borderRadius: `10px`, alignItems: `center` }} />
             </Link>
 
             <DescAcc>
@@ -28,37 +26,37 @@ const LayoutHome = (props) => {
                 <PhoneAcc> +62 8139 3877 7946</PhoneAcc>
               </Link>
             </DescAcc>
-            <FontAwesomeIcon icon={faBell} style={{ fontSize: `18px` }}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faBell} style={{ fontSize: `18px`, marginLeft : 5 }}></FontAwesomeIcon>
           </NavRight>
         </NavContainer>
       </Nav>
       <Main>
         <SectionLeft>
           <ListMenu>
-            <ul>
+            <ul style={{    paddingInlineStart: 0}}>
               <List>
-                <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faChartColumn}></FontAwesomeIcon> Dashboard
-                </Link>
+                  <Link to="" style={{ textDecoration: "none" }}>
+                  <FontAwesomeIcon icon={faChartColumn} style={{paddingRight : 10 }}></FontAwesomeIcon> Dashboard    
+                  </Link>
               </List>
               <br />
               <List>
                 <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faArrowUp} style={{paddingRight : 10 }}></FontAwesomeIcon>
                   Transfer
                 </Link>
               </List>
               <br />
               <List>
                 <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faPlus} style={{paddingRight : 10 }}></FontAwesomeIcon>
                   Top-Up
                 </Link>
               </List>
               <br />
               <List>
                 <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faUser} style={{paddingRight : 10 }}></FontAwesomeIcon>
                   Profile
                 </Link>
               </List>
@@ -69,7 +67,7 @@ const LayoutHome = (props) => {
               <br />
               <List>
                 <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faArrowRightFromBracket}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faArrowRightFromBracket} style={{paddingRight : 10 }}></FontAwesomeIcon>
                   Log out
                 </Link>
               </List>
@@ -77,8 +75,6 @@ const LayoutHome = (props) => {
           </ListMenu>
         </SectionLeft>
         <SectionRight>
-          <DetailsInformation Title="Amount" Desc="100k" />
-          <ContactInformation Title="era" Desc="numb02282882" />
           {children}
         </SectionRight>
       </Main>
