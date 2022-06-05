@@ -26,7 +26,7 @@ const LayoutHome = (props) => {
                 <PhoneAcc> +62 8139 3877 7946</PhoneAcc>
               </Link>
             </DescAcc>
-            <FontAwesomeIcon icon={faBell} style={{ fontSize: `18px`, marginLeft : 5 }}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faBell} style={{ fontSize: `18px`, marginLeft : 5, color: `#7950f2` }}></FontAwesomeIcon>
           </NavRight>
         </NavContainer>
       </Nav>
