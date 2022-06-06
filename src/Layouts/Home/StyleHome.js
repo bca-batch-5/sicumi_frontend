@@ -19,6 +19,7 @@ export const Main = styled.div`
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 35px;
+  align-items: stretch;
 `;
 export const SectionLeft = styled.section`
   position: relative;
@@ -34,6 +35,7 @@ export const SectionLeft = styled.section`
   flex-direction: column;
   justify-content: space-between;
   padding-top: 10px;
+  
 `;
 export const Nav = styled.section`
   position: relative;
@@ -54,13 +56,8 @@ export const Hlogo = styled.h1`
 
 export const SectionRight = styled.section`
   width: 60%;
-  height: 70vh;
+  // height: 70vh;
   margin-right: 10%;
-  // background-color: white;
-  // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
-  // border: 1px solid white;
-  // border-radius: 25px;
-  // padding: 40px;
 `;
 
 export const DescAcc = styled.section`
@@ -131,7 +128,7 @@ export const List = styled.section`
   margin-top: 40px;
   padding-left: 20%;
   margin: 10px;
-
+ 
   &:hover,
   &:focus,
   &:active {
