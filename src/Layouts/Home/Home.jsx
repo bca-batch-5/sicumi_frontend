@@ -26,37 +26,37 @@ const LayoutHome = (props) => {
                 <PhoneAcc> +62 8139 3877 7946</PhoneAcc>
               </Link>
             </DescAcc>
-            <FontAwesomeIcon icon={faBell} style={{ fontSize: `18px`, marginLeft : 5, color: `#7950f2` }}></FontAwesomeIcon>
+            <FontAwesomeIcon icon={faBell} style={{ fontSize: `18px`, marginLeft: 5, color: `#7950f2` }}></FontAwesomeIcon>
           </NavRight>
         </NavContainer>
       </Nav>
       <Main>
         <SectionLeft>
           <ListMenu>
-            <ul style={{    paddingInlineStart: 0}}>
+            <ul style={{ paddingInlineStart: 0 }}>
               <List>
-                  <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faChartColumn} style={{paddingRight : 10 }}></FontAwesomeIcon> Dashboard    
-                  </Link>
+                <Link to="" style={{ textDecoration: "none" }}>
+                  <FontAwesomeIcon icon={faChartColumn} style={{ paddingRight: 10 }}></FontAwesomeIcon> Dashboard
+                </Link>
               </List>
               <br />
               <List>
                 <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faArrowUp} style={{paddingRight : 10 }}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faArrowUp} style={{ paddingRight: 10 }}></FontAwesomeIcon>
                   Transfer
                 </Link>
               </List>
               <br />
               <List>
                 <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faPlus} style={{paddingRight : 10 }}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faPlus} style={{ paddingRight: 10 }}></FontAwesomeIcon>
                   Top-Up
                 </Link>
               </List>
               <br />
               <List>
-                <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faUser} style={{paddingRight : 10 }}></FontAwesomeIcon>
+                <Link to="/profile" style={{ textDecoration: "none" }}>
+                  <FontAwesomeIcon icon={faUser} style={{ paddingRight: 10 }}></FontAwesomeIcon>
                   Profile
                 </Link>
               </List>
@@ -67,16 +67,14 @@ const LayoutHome = (props) => {
               <br />
               <List>
                 <Link to="" style={{ textDecoration: "none" }}>
-                  <FontAwesomeIcon icon={faArrowRightFromBracket} style={{paddingRight : 10 }}></FontAwesomeIcon>
+                  <FontAwesomeIcon icon={faArrowRightFromBracket} style={{ paddingRight: 10 }}></FontAwesomeIcon>
                   Log out
                 </Link>
               </List>
             </ul>
           </ListMenu>
         </SectionLeft>
-        <SectionRight>
-          {children}
-        </SectionRight>
+        <SectionRight>{children}</SectionRight>
       </Main>
       <Footer>
         <LeftFooter>2020 Sicumi. All right reserved.</LeftFooter>

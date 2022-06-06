@@ -10,7 +10,7 @@ export const InputHolder = styled.div`
 export const Input = styled.input`
   margin: 0.5rem;
   font-size: 24px;
-color: #6379f4;
+color:#5f3dc4;
   text-align: center;
   width: 53px;
   height: 65px;
@@ -21,6 +21,6 @@ color: #6379f4;
     &:hover,
   &:focus{
     border-color:#5f3dc4;
-    color: #6379f4;
+    color: #5f3dc4;
 
 `;

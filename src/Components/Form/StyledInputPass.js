@@ -8,8 +8,8 @@ export const LabelText = styled.label`
   cursor: pointer;
   &:hover,
   &:focus {
-    border-bottom: 2px solid #6379f4;
-    color: #6379f4;
+    border-bottom: 2px solid #5f3dc4;
+    color: #5f3dc4;
   }
 `;
 
@@ -19,11 +19,10 @@ export const Passc = styled.input`
   display: flex;
   border: none;
   color: rgba(169, 169, 169, 0.8);
-  background-color: #fafcff;
   font-size: 16px;
   outline: none;
   &:hover,
   &:focus {
-    color: #3a3d42;
+    color: #5f3dc4;
   }
 `;
