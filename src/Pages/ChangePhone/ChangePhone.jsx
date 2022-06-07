@@ -17,7 +17,7 @@ const ChangePhone = () => {
   return (
     <LayoutHome>
       <Wrappers>
-        <TagInformation Title="Change PIN" Desc="Enter your current 6 digits Sicumi PIN below to continue to the next steps." />
+        <TagInformation Title="Add Phone Number" Desc="Add at least one phone number for the transfer ID so you can start transfering your money to another user." />
       </Wrappers>
       <br />
       <br />

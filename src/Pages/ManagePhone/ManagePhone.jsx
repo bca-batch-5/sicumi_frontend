@@ -19,7 +19,6 @@ const ManagePhone = () => {
           <Title>Primary</Title>
           <Desc>+62 813-9387-7946</Desc>
         </Mwrapper>
-
         <Link to="/changephone" style={{ textDecoration: "none", paddingRight: 50, paddingTop: 15, fontSize: 15 }}>
           <FontAwesomeIcon icon={faTrash} style={{ paddingRight: 10 }} />
         </Link>

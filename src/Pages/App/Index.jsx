@@ -8,6 +8,7 @@ import ChangePin from "../ChangePin/ChangePin";
 import ManagePhone from "../ManagePhone/ManagePhone";
 import PersonalInformation from "../PersonalInformation/PersonalInformation";
 import Profile from "../Profile/Profile";
+
 // declare function
 
 const App = () => {
