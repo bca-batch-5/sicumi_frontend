@@ -11,7 +11,7 @@ transition: all 0.5s;
   font-size: 1.4rem;
   margin-bottom: 3rem;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .alert {

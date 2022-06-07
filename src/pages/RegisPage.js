@@ -7,13 +7,14 @@ import InputStyled from "../styled/InputStyled";
 import MainHeroStyled from "../styled/MainHeroStyled";
 import { ReactComponent as EmailSvg } from "../assets/email.svg";
 import { ReactComponent as PassSvg } from "../assets/password.svg";
+import { ReactComponent as PersonSvg } from "../assets/person.svg";
 import { ReactComponent as VisibleSvg } from "../assets/visible.svg";
 import { ReactComponent as NotVisibleSvg } from "../assets/notvisible.svg";
 import BtnAllStyled from "../styled/BtnAllStyled";
 import InputBox from "../components/InputBox";
 import { Link } from "react-router-dom";
 
-const LoginPage = () => {
+const RegisPage = () => {
   const [visible, setVisible] = useState(false);
   const [formFocus, setFormFocus] = useState(false);
 
@@ -24,7 +25,6 @@ const LoginPage = () => {
   const getFocusHandler = (focusData) => {
     setFormFocus(focusData ? true : false);
   };
-
   return (
     <ContainerStyled>
       <SideHero />
@@ -35,6 +35,16 @@ const LoginPage = () => {
         />
 
         <Form getFocus={formFocus}>
+          {/* NAME INPUT */}
+          <InputStyled isActive={formFocus}>
+            <PersonSvg />
+            <InputBox
+              type="text"
+              placeholder="Enter your name"
+              getFocus={getFocusHandler}
+            />
+          </InputStyled>
+
           {/* EMAIL INPUT */}
           <InputStyled isActive={formFocus}>
             <EmailSvg />
@@ -60,16 +70,13 @@ const LoginPage = () => {
             )}
           </InputStyled>
 
-          <div className="reset__pass">
-            <Link to={"/reset"}> Forgot Password?</Link>
-          </div>
           <div className="alert">Email or Password Invalid</div>
-          <BtnAllStyled type="submit" value="Log In" />
+          <BtnAllStyled type="submit" value="Sign Up" />
         </Form>
         <div className="cta">
-          Don't have an account? Let's
+          Already have an account? Let's
           <span className="highlight">
-            <Link to={"/regis"}> Sign Up</Link>
+            <Link to={"/login"}> Log In</Link>
           </span>
         </div>
       </MainHeroStyled>
@@ -77,4 +84,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisPage;

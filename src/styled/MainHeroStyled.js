@@ -10,5 +10,10 @@ font-size: 1.6rem;
   text-align: center;
   cursor: pointer;
 }
+.icon__success {
+  width: 10rem;
+  display: flex;
+  margin: 5rem auto;
+}
 `;
 export default MainHeroStyled;

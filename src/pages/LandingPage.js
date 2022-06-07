@@ -37,10 +37,10 @@ const LandingPage = () => {
             className="header__logo"
           />
           <div className="header__nav">
-            <a className="btn__link" href="/">
+            <a className="btn__link" href="/login">
               Login
             </a>
-            <a className="btn__link" href="/">
+            <a className="btn__link" href="/regis">
               Sign Up
             </a>
           </div>
@@ -61,7 +61,7 @@ const LandingPage = () => {
               We bring you a mobile app for banking problems that oftenly
               wasting much of your times.
             </p>
-            <a className="btn__link" href="/">
+            <a className="btn__link" href="/regis">
               Try it Free
             </a>
             <p className="hero-box-text__sub">Available on :</p>
