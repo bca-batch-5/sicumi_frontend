@@ -64,7 +64,7 @@ const LoginPage = () => {
             <Link to={"/reset"}> Forgot Password?</Link>
           </div>
           <div className="alert">Email or Password Invalid</div>
-          <BtnAllStyled type="submit" value="Log In" />
+          <BtnAllStyled type="submit" id="signin" value="Log In" />
         </Form>
         <div className="cta">
           Don't have an account? Let's

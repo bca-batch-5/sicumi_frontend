@@ -28,7 +28,7 @@ const ResetPassPage = () => {
       <MainHeroStyled>
         <Intro
           titleProps="Did You Forgot Your Password? Don't Worry, You Can Reset Your Password In A Minutes."
-          subProps="To reset your password, you must type your e-mail and we will send a link to your email and you will be directed to the reset password screens."
+          subProps="Now you can create a new password for your Sicumi account. Type your new password twice so we can confirm your new password."
         />
 
         <Form getFocus={formFocus}>
@@ -57,7 +57,7 @@ const ResetPassPage = () => {
           </InputStyled>
 
           <div className="alert">Email or Password Invalid</div>
-          <BtnAllStyled type="submit" value="Reset Password" />
+          <BtnAllStyled type="submit" id="reset" value="Reset Password" />
         </Form>
       </MainHeroStyled>
     </ContainerStyled>

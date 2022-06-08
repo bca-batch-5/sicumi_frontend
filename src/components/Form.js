@@ -5,15 +5,28 @@ const Form = (props) => {
   const testing = (e) => {
     e.preventDefault();
 
-    const btnType = e.target[e.target.length - 1].value;
+    const btnId = e.target[e.target.length - 1].id;
 
-    switch (btnType) {
-      case "Log In":
+    console.log(btnId);
+    switch (btnId) {
+      case "signin":
         console.log("Ini Login");
         break;
 
-      case "Sign Up":
+      case "signup":
         console.log("Ini Sign Up");
+        break;
+
+      case "signpin":
+        console.log("Ini Sign Pin");
+        break;
+
+      case "checkmail":
+        console.log("Ini Check Mail");
+
+        break;
+      case "reset":
+        console.log("Ini Reset Password");
         break;
 
       default:

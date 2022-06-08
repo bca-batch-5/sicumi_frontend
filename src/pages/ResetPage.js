@@ -36,7 +36,7 @@ const ResetPage = () => {
           </InputStyled>
 
           <div className="alert">Email or Password Invalid</div>
-          <BtnAllStyled type="submit" value="Search" />
+          <BtnAllStyled type="submit" id="checkmail" value="Search" />
         </Form>
       </MainHeroStyled>
     </ContainerStyled>

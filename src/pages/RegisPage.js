@@ -71,7 +71,7 @@ const RegisPage = () => {
           </InputStyled>
 
           <div className="alert">Email or Password Invalid</div>
-          <BtnAllStyled type="submit" value="Sign Up" />
+          <BtnAllStyled type="submit" id="signup" value="Sign Up" />
         </Form>
         <div className="cta">
           Already have an account? Let's

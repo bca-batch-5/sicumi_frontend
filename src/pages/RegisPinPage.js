@@ -33,7 +33,7 @@ const RegisPinPage = () => {
             <InputBoxPin getFocus={getFocusHandler} />
           </InputPinStyled>
 
-          <BtnAllStyled type="submit" value="Confirm" />
+          <BtnAllStyled type="submit" id="signpin" value="Confirm" />
         </Form>
       </MainHeroStyled>
     </ContainerStyled>
