@@ -58,11 +58,19 @@ const Profile = () => {
       {
         label: "Dataset 1",
         data: [900, 290, 90, 780, 890, 100, 200],
-        backgroundColor: "#7950f2",
+        backgroundColor: "green",
         borderRadius: 100,
         barPercentage: 0.3,
         borderSkipped: false,
       },
+      {
+        label: "Dataset 1",
+        data: [900, 290, 90, 780, 890, 100, 200],
+        backgroundColor: "red",
+        borderRadius: 100,
+        barPercentage: 0.3,
+        borderSkipped: false,
+      }
     ],
   };
 
