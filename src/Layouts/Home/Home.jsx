@@ -64,7 +64,6 @@ const LayoutHome = (props) => {
               <br />
               <br />
               <br />
-              <br />
               <List>
                 <Link to="" style={{ textDecoration: "none" }}>
                   <FontAwesomeIcon icon={faArrowRightFromBracket} style={{ paddingRight: 10 }}></FontAwesomeIcon>

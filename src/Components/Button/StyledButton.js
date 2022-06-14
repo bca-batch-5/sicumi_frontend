@@ -6,7 +6,11 @@ export const Bbutton = styled.button`
   padding: 1rem;
   border-radius: 12px;
   border: none;
-  color: #88888f;
+  /* color: #88888f; */
+  background-color: #5f3dc4;
+  opacity: 50%;
+  color: white;
+
   cursor: pointer;
   margin: 10px;
   justify-content: space-between;
@@ -14,5 +18,6 @@ export const Bbutton = styled.button`
   &:focus {
     background-color: #5f3dc4;
     color: white;
+    opacity: 100%;
   }
 `;

@@ -36,7 +36,9 @@ const PersonalInformation = () => {
             Email
             <FontAwesomeIcon icon={faPencil} style={{ paddingLeft: 10 }}></FontAwesomeIcon>
           </Title>
-          <Desc contentEditable="true">Robert@mail.com</Desc>
+          <Desc type="email" contentEditable="true">
+            Robert@mail.com
+          </Desc>
         </Mwrapper>
       </Manage>
       <Manage>
@@ -49,7 +51,7 @@ const PersonalInformation = () => {
         </Link>
       </Manage>
       <CenterWrapper>
-        <Button Name="Save" />
+        <Button Name="Save" onclick =""/>
       </CenterWrapper>
     </LayoutHome>
   );
