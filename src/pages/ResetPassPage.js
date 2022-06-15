@@ -15,6 +15,18 @@ const ResetPassPage = () => {
   const [visible, setVisible] = useState(false);
   const [formFocus, setFormFocus] = useState(false);
 
+  const [curAlert, setCurAlert] = useState(false);
+  const [mesAlert, setMesAlert] = useState("testing");
+
+  const alertFunc = (message) => {
+    setCurAlert(true);
+    setMesAlert(message);
+
+    setTimeout(() => {
+      setCurAlert(false);
+    }, 3000);
+  };
+
   const visibility = () => {
     setVisible(!visible);
   };
@@ -31,7 +43,7 @@ const ResetPassPage = () => {
           subProps="Now you can create a new password for your Sicumi account. Type your new password twice so we can confirm your new password."
         />
 
-        <Form getFocus={formFocus}>
+        <Form getFocus={formFocus} setAlert={alertFunc} alertStatus={curAlert}>
           {/* PASSWORD INPUT */}
           <InputStyled isActive={formFocus}>
             <PassSvg />
@@ -56,7 +68,7 @@ const ResetPassPage = () => {
             />
           </InputStyled>
 
-          <div className="alert">Email or Password Invalid</div>
+          <div className="alert">{mesAlert}</div>
           <BtnAllStyled type="submit" id="reset" value="Reset Password" />
         </Form>
       </MainHeroStyled>

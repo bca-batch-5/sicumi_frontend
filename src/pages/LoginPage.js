@@ -17,6 +17,18 @@ const LoginPage = () => {
   const [visible, setVisible] = useState(false);
   const [formFocus, setFormFocus] = useState(false);
 
+  const [curAlert, setCurAlert] = useState(false);
+  const [mesAlert, setMesAlert] = useState("testing");
+
+  const alertFunc = (message) => {
+    setCurAlert(true);
+    setMesAlert(message);
+
+    setTimeout(() => {
+      setCurAlert(false);
+    }, 3000);
+  };
+
   const visibility = () => {
     setVisible(!visible);
   };
@@ -34,7 +46,7 @@ const LoginPage = () => {
           subProps="Transfering money is easier than ever, you can access Sicumi wherever you are. Desktop, laptop, mobile phone? we cover all of that for you!"
         />
 
-        <Form getFocus={formFocus}>
+        <Form getFocus={formFocus} setAlert={alertFunc} alertStatus={curAlert}>
           {/* EMAIL INPUT */}
           <InputStyled isActive={formFocus}>
             <EmailSvg />
@@ -63,7 +75,7 @@ const LoginPage = () => {
           <div className="reset__pass">
             <Link to={"/reset"}> Forgot Password?</Link>
           </div>
-          <div className="alert">Email or Password Invalid</div>
+          <div className="alert">{mesAlert}</div>
           <BtnAllStyled type="submit" id="signin" value="Log In" />
         </Form>
         <div className="cta">

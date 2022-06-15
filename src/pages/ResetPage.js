@@ -12,6 +12,18 @@ import InputBox from "../components/InputBox";
 const ResetPage = () => {
   const [formFocus, setFormFocus] = useState(false);
 
+  const [curAlert, setCurAlert] = useState(false);
+  const [mesAlert, setMesAlert] = useState("testing");
+
+  const alertFunc = (message) => {
+    setCurAlert(true);
+    setMesAlert(message);
+
+    setTimeout(() => {
+      setCurAlert(false);
+    }, 3000);
+  };
+
   const getFocusHandler = (focusData) => {
     setFormFocus(focusData ? true : false);
   };
@@ -24,7 +36,7 @@ const ResetPage = () => {
           subProps="To reset your password, you must type your e-mail and we will send a link to your email and you will be directed to the reset password screens."
         />
 
-        <Form getFocus={formFocus}>
+        <Form getFocus={formFocus} setAlert={alertFunc} alertStatus={curAlert}>
           {/* EMAIL INPUT */}
           <InputStyled isActive={formFocus}>
             <EmailSvg />
@@ -35,7 +47,7 @@ const ResetPage = () => {
             />
           </InputStyled>
 
-          <div className="alert">Email or Password Invalid</div>
+          <div className="alert">{mesAlert}</div>
           <BtnAllStyled type="submit" id="checkmail" value="Search" />
         </Form>
       </MainHeroStyled>

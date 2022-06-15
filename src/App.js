@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/regis/pin" element={<RegisPinPage />} />
           <Route path="/regis/pin/success" element={<RegisSucPage />} />
           <Route path="/reset" element={<ResetPage />} />
-          <Route path="/reset/confirm" element={<ResetPassPage />} />
+          <Route path="/reset/confirm/:id" element={<ResetPassPage />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -15,7 +15,8 @@ transition: all 0.5s;
 }
 
 .alert {
-  visibility: hidden;
+  visibility: ${(props) => (props.isAlert ? "visible" : "hidden")};
+  color: red;
   align-self: center;
   font-size: 1.4rem;
 }
