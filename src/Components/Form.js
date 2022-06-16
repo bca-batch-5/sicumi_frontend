@@ -27,6 +27,14 @@ const Form = (props) => {
         };
         const respLogin = await getUserAPI(data);
         if (respLogin.data.status === 302) {
+          window.localStorage.setItem(
+            "dataUser",
+            JSON.stringify({
+              userId: respLogin.data.data.userId,
+              email: respLogin.data.data.email,
+              token: respLogin.data.data.token,
+            })
+          );
           navigate("/");
         } else if (respLogin.data.status === 404) {
           props.setAlert(respLogin.data.message);
