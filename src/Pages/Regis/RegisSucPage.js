@@ -1,8 +1,8 @@
 import React from "react";
-import Intro from "../components/Intro";
-import SideHero from "../layouts/SideHero";
-import ContainerStyled from "../styled/ContainerStyled";
-import MainHeroStyled from "../styled/MainHeroStyled";
+import Intro from "../../Components/Intro";
+import SideHero from "../../Layouts/SideHero";
+import ContainerStyled from "../../Styled/ContainerStyled";
+import MainHeroStyled from "../../Styled/MainHeroStyled";
 
 const RegisSucPage = () => {
   return (
@@ -11,7 +11,7 @@ const RegisSucPage = () => {
       <MainHeroStyled>
         <img
           className="icon__success"
-          src={require("../assets/success.png")}
+          src={require("../../Images/success.png")}
           alt="success registration"
         />
         <Intro

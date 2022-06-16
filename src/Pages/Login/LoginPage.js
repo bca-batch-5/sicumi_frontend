@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import Form from "../components/Form";
-import Intro from "../components/Intro";
-import SideHero from "../layouts/SideHero";
-import ContainerStyled from "../styled/ContainerStyled";
-import InputStyled from "../styled/InputStyled";
-import MainHeroStyled from "../styled/MainHeroStyled";
-import { ReactComponent as EmailSvg } from "../assets/email.svg";
-import { ReactComponent as PassSvg } from "../assets/password.svg";
-import { ReactComponent as VisibleSvg } from "../assets/visible.svg";
-import { ReactComponent as NotVisibleSvg } from "../assets/notvisible.svg";
-import BtnAllStyled from "../styled/BtnAllStyled";
-import InputBox from "../components/InputBox";
+import Form from "../../Components/Form";
+import Intro from "../../Components/Intro";
+import SideHero from "../../Layouts/SideHero";
+import ContainerStyled from "../../Styled/ContainerStyled";
+import InputStyled from "../../Styled/InputStyled";
+import MainHeroStyled from "../../Styled/MainHeroStyled";
+import { ReactComponent as EmailSvg } from "../../Images/email.svg";
+import { ReactComponent as PassSvg } from "../../Images/password.svg";
+import { ReactComponent as VisibleSvg } from "../../Images/visible.svg";
+import { ReactComponent as NotVisibleSvg } from "../../Images/notvisible.svg";
+import BtnAllStyled from "../../Styled/BtnAllStyled";
+import InputBox from "../../Components/InputBox";
 import { Link } from "react-router-dom";
 
 const LoginPage = () => {

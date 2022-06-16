@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import HeaderStyled from "../styled/HeaderStyled";
-import MainStyled from "../styled/MainStyled";
-import SectionHeroStyled from "../styled/SectionHeroStyled";
-import { ReactComponent as AppStoreSvg } from "../assets/app-store-logo.svg";
-import { ReactComponent as GooglePlaySvg } from "../assets/google-play-logo.svg";
-import { ReactComponent as BtnRight } from "../assets/btnRight.svg";
-import { ReactComponent as BtnLeft } from "../assets/btnLeft.svg";
-import SectionSupportStyled from "../styled/SectionSupportStyled";
-import SectionAboutStyled from "../styled/SectionAboutStyled";
-import Cards from "../components/Cards";
-import SectionFeatureStyled from "../styled/SectionFeatureStyled";
-import SectionTestimoniStyled from "../styled/SectionTestimoniStyled";
-import SectionFooterStyled from "../styled/SectionFooterStyled";
+import HeaderStyled from "../../Styled/HeaderStyled";
+import MainStyled from "../../Styled/MainStyled";
+import SectionHeroStyled from "../../Styled/SectionHeroStyled";
+import { ReactComponent as AppStoreSvg } from "../../Images/app-store-logo.svg";
+import { ReactComponent as GooglePlaySvg } from "../../Images/google-play-logo.svg";
+import { ReactComponent as BtnRight } from "../../Images/btnRight.svg";
+import { ReactComponent as BtnLeft } from "../../Images/btnLeft.svg";
+import SectionSupportStyled from "../../Styled/SectionSupportStyled";
+import SectionAboutStyled from "../../Styled/SectionAboutStyled";
+import Cards from "../../Components/Cards";
+import SectionFeatureStyled from "../../Styled/SectionFeatureStyled";
+import SectionTestimoniStyled from "../../Styled/SectionTestimoniStyled";
+import SectionFooterStyled from "../../Styled/SectionFooterStyled";
 import CarousData from "./CarousData";
 
 const LandingPage = () => {
@@ -32,7 +32,7 @@ const LandingPage = () => {
       <div className="hero">
         <HeaderStyled>
           <img
-            src={require("../assets/squid.png")}
+            src={require("../../Images/squid.png")}
             alt="company-logo"
             className="header__logo"
           />
@@ -48,7 +48,7 @@ const LandingPage = () => {
         <SectionHeroStyled>
           <div className="hero-box-img">
             <img
-              src={require("../assets/phone.png")}
+              src={require("../../Images/phone.png")}
               alt="phone img"
               className="hero-box-img__img"
             />
@@ -79,7 +79,7 @@ const LandingPage = () => {
       <SectionSupportStyled>
         <img
           className="support__img"
-          src={require("../assets/supports.png")}
+          src={require("../../Images/supports.png")}
           alt="company supports"
         />
       </SectionSupportStyled>
@@ -101,7 +101,7 @@ const LandingPage = () => {
         <SectionFeatureStyled>
           <div className="feature-box-img">
             <img
-              src={require("../assets/phone2.png")}
+              src={require("../../Images/phone2.png")}
               alt="phone img 2"
               className="feature-box-img__img"
             />
@@ -154,7 +154,7 @@ const LandingPage = () => {
               >
                 <img
                   className="carous__img"
-                  src={require(`../assets/${data.images}`)}
+                  src={require(`../../Images/${data.images}`)}
                   alt="testimonial"
                 />
                 <div className="carous__name">{data.name}</div>

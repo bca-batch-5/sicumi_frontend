@@ -1,4 +1,4 @@
-import fetchAPI from "../config/FetchAxios";
+import fetchAPI from "../Config/FetchAxios";
 
 const ROOT_API_USER = process.env.REACT_APP_API_USER;
 

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Form from "../components/Form";
-import Intro from "../components/Intro";
-import SideHero from "../layouts/SideHero";
-import ContainerStyled from "../styled/ContainerStyled";
-import MainHeroStyled from "../styled/MainHeroStyled";
-import BtnAllStyled from "../styled/BtnAllStyled";
-import InputPinStyled from "../styled/InputPinStyled";
-import InputBoxPin from "../components/InputBoxPin";
+import Form from "../../Components/Form";
+import Intro from "../../Components/Intro";
+import SideHero from "../../Layouts/SideHero";
+import ContainerStyled from "../../Styled/ContainerStyled";
+import MainHeroStyled from "../../Styled/MainHeroStyled";
+import BtnAllStyled from "../../Styled/BtnAllStyled";
+import InputPinStyled from "../../Styled/InputPinStyled";
+import InputBoxPin from "../../Components/InputBoxPin";
 
 const RegisPinPage = () => {
   const [formFocus, setFormFocus] = useState(false);

@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
-import LoginPage from "./pages/LoginPage";
-import RegisPage from "./pages/RegisPage";
-import RegisPinPage from "./pages/RegisPinPage";
-import RegisSucPage from "./pages/RegisSucPage";
-import ResetPage from "./pages/ResetPage";
-import ResetPassPage from "./pages/ResetPassPage";
+import LandingPage from "../Landing/LandingPage";
+import LoginPage from "../Login/LoginPage";
+import RegisPage from "../Regis/RegisPage";
+import RegisPinPage from "../Regis/RegisPinPage";
+import RegisSucPage from "../Regis/RegisSucPage";
+import ResetPage from "../Reset/ResetPage";
+import ResetPassPage from "../Reset/ResetPassPage";
 
 const App = () => {
   return (

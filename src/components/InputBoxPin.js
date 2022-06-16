@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import InputBoxPinStyled from "../styled/InputBoxPinStyled";
+import InputBoxPinStyled from "../Styled/InputBoxPinStyled";
 
 const InputBoxPin = (props) => {
   const [formFocus, setFormFocus] = useState(true);

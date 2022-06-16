@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import InputBoxStyled from "../styled/InputBoxStyled";
+import InputBoxStyled from "../Styled/InputBoxStyled";
 
 const InputBox = (props) => {
   const [formFocus, setFormFocus] = useState(true);

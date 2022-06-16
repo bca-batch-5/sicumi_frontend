@@ -11,7 +11,7 @@ const SideHero = () => {
       </h1>
       <img
         className="side__img"
-        src={require("../assets/side-img.png")}
+        src={require("../Images/side-img.png")}
         alt="side gambar sicumi"
       />
       <div className="side__sub">The app that can make your life easier</div>

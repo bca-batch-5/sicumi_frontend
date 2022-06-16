@@ -5,8 +5,8 @@ import {
   findEmailAPI,
   getUserAPI,
   newPasswordAPI,
-} from "../services/User";
-import FormStyled from "../styled/FormStyled";
+} from "../Services/User";
+import FormStyled from "../Styled/FormStyled";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Form = (props) => {

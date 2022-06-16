@@ -1,5 +1,5 @@
 import React from "react";
-import IntroStyled from "../styled/IntroStyled";
+import IntroStyled from "../Styled/IntroStyled";
 
 const Intro = (props) => {
   return (

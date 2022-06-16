@@ -1,8 +1,8 @@
 import React from "react";
-import CardsStyled from "../styled/CardsStyled";
-import { ReactComponent as LogoCard1 } from "../assets/card1.svg";
-import { ReactComponent as LogoCard2 } from "../assets/card2.svg";
-import { ReactComponent as LogoCard3 } from "../assets/card3.svg";
+import CardsStyled from "../Styled/CardsStyled";
+import { ReactComponent as LogoCard1 } from "../Images/card1.svg";
+import { ReactComponent as LogoCard2 } from "../Images/card2.svg";
+import { ReactComponent as LogoCard3 } from "../Images/card3.svg";
 
 const Cards = () => {
   return (
