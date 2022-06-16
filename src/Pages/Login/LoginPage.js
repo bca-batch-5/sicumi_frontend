@@ -73,7 +73,7 @@ const LoginPage = () => {
           </InputStyled>
 
           <div className="reset__pass">
-            <Link to={"/reset"}> Forgot Password?</Link>
+            <Link to={"/Reset"}> Forgot Password?</Link>
           </div>
           <div className="alert">{mesAlert}</div>
           <BtnAllStyled type="submit" id="signin" value="Log In" />
@@ -81,7 +81,7 @@ const LoginPage = () => {
         <div className="cta">
           Don't have an account? Let's
           <span className="highlight">
-            <Link to={"/regis"}> Sign Up</Link>
+            <Link to={"/Regis"}> Sign Up</Link>
           </span>
         </div>
       </MainHeroStyled>

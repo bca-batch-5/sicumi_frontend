@@ -51,7 +51,7 @@ const Form = (props) => {
             password: e.target[2].value,
           };
           window.localStorage.setItem("regisObject", JSON.stringify(data));
-          navigate("/regis/pin");
+          navigate("/Regis/Pin");
         }
         break;
 
@@ -70,9 +70,9 @@ const Form = (props) => {
           const respPin = await addUserAPI(data);
           console.log(respPin);
           if (respPin.data.status === 200) {
-            navigate("/regis/pin/success");
+            navigate("/Regis/Pin/Success");
             setTimeout(() => {
-              navigate("/login");
+              navigate("/Login");
             }, 5000);
           }
         }
@@ -110,7 +110,7 @@ const Form = (props) => {
         if (respReset.data.status === 202) {
           props.setAlert("Password Changed");
           setTimeout(() => {
-            navigate("/login");
+            navigate("/Login");
           }, 3000);
         }
         break;

@@ -88,7 +88,7 @@ const RegisPage = () => {
         <div className="cta">
           Already have an account? Let's
           <span className="highlight">
-            <Link to={"/login"}> Log In</Link>
+            <Link to={"/Login"}> Log In</Link>
           </span>
         </div>
       </MainHeroStyled>
