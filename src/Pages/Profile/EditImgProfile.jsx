@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import { getUserByIdAPI, loadFileAPI, uploadFileAPI } from "../../Services/Users";
 
-const Profile = () => {
+const EditImgProfile = () => {
   const [phone, setPhone] = useState("");
   const [fullname, setFullname] = useState("");
   const [photo, setPhoto] = useState(null);
@@ -64,11 +64,10 @@ const Profile = () => {
           }}
         />
         <DescAcc>
-          <Link to="/Editimage" style={{ fontSize: 12, textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faPencil} style={{ paddingRight: 10 }} />
-            Edit
-          </Link>
-
+          <input type={"file"} onChange={onChange} />
+          <button onClick={submit} style={{ width: 87, marginTop: 5 }}>
+            Upload file
+          </button>
           <NameAcc> {fullname}</NameAcc>
           <PhoneAcc>{phone}</PhoneAcc>
         </DescAcc>
@@ -89,4 +88,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default EditImgProfile;

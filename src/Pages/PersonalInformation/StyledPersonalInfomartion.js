@@ -46,3 +46,16 @@ export const CenterWrapper = styled.section`
   text-align: center;
   margin-bottom: 10px;
 `;
+export const Input = styled.input`
+  width: 320px;
+  margin-bottom: 10px;
+  display: flex;
+  border: none;
+  color: rgba(169, 169, 169, 0.8);
+  font-size: 16px;
+  outline: none;
+  &:hover,
+  &:focus {
+    color: #3a3d42;
+  }
+`;

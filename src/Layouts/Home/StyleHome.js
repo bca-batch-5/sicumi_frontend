@@ -19,6 +19,7 @@ export const Main = styled.div`
   justify-content: space-between;
   padding-top: 40px;
   padding-bottom: 35px;
+  align-items: stretch;
 `;
 export const SectionLeft = styled.section`
   position: relative;
@@ -132,6 +133,35 @@ export const List = styled.section`
   margin-top: 40px;
   padding-left: 20%;
   margin: 10px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 100%;
+    color: #5f3dc4;
+    border-left: 5px solid #5f3dc4;
+  }
+`;
+
+export const Dropdown = styled.section`
+  position: relative;
+  display: inline-block;
+  &:hover {
+    display: block;
+  }
+`;
+
+export const ListLogOut = styled.div`
+  padding-left: 30px;
+  text-decoration: none;
+  font-size: 18px;
+  height: 30px;
+  color: #dadada;
+  opacity: 60%;
+  margin-top: 40px;
+  padding-left: 20%;
+  margin: 10px;
+  margin-bottom: 30px;
 
   &:hover,
   &:focus,
