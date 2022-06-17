@@ -5,6 +5,7 @@ export const Wrappers = styled.section`
   flex-direction: column;
   align-items: center;
 `;
+
 export const DescAcc = styled.section`
   display: flex;
   flex-direction: column;
