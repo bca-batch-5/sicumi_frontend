@@ -10,12 +10,25 @@ import EditPersonalInformation from "../PersonalInformation/EditPersonalInformat
 import PersonalInformation from "../PersonalInformation/PersonalInformation";
 import EditImgProfile from "../Profile/EditImgProfile";
 import Profile from "../Profile/Profile";
+import LandingPage from "../Landing/LandingPage";
+import LoginPage from "../Login/LoginPage";
+import RegisPage from "../Regis/RegisPage";
+import RegisPinPage from "../Regis/RegisPinPage";
+import RegisSucPage from "../Regis/RegisSucPage";
+import ResetPage from "../Reset/ResetPage";
+import ResetPassPage from "../Reset/ResetPassPage";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Regis" element={<RegisPage />} />
+        <Route path="/Regis/Pin" element={<RegisPinPage />} />
+        <Route path="/Regis/Pin/Success" element={<RegisSucPage />} />
+        <Route path="/Reset" element={<ResetPage />} />
+        <Route path="/Reset/Confirm/:id" element={<ResetPassPage />} />
         <Route path="/Layout" element={<LayoutHome />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/PersonalInformation" element={<PersonalInformation />} />
@@ -27,7 +40,9 @@ const App = () => {
         <Route path="/EditImage" element={<EditImgProfile />} />
       </Routes>
     </BrowserRouter>
-  );
-};
+  )
+}
+
+
 
 export default App;

@@ -3,6 +3,7 @@ import LayoutHome from "../../Layouts/Home/Home";
 import { useNavigate } from "react-router-dom";
 import { Wrappers, CenterWrapper, MainContent } from "./StyledChangePassword";
 import TagInformation from "../../Components/TextBox/TagInformation";
+// import DetailsInformation from "../../Components/TextBox/DetailsInformation";
 import InputPass from "../../Components/Form/InputPass";
 import Button from "../../Components/Button/Button";
 import { updatePasswordAPI } from "../../Services/Users";
@@ -59,20 +60,18 @@ const ChangePassword = () => {
           <TagInformation Title="Change Password" Desc="You must enter your current password and then type your new password twice." />
         </Wrappers>
         <CenterWrapper>
-          <InputPass placeholder="Current Password" name="currentpassword" id="currentpassword" value={currentpassword} onchange={(e) => setCurrentPassword(e.target.value)} />
+          <InputPass Placeholder="Current Password" />
           <br />
-          <InputPass placeholder="New Password" name="newpassword" id="newpassword" value={newpassword} onchange={(e) => setNewPassword(e.target.value)} />
+          <InputPass Placeholder="New Password" />
           <br />
-          <InputPass placeholder="Repeat New Password" name="renewpassword" id="renewpassword" value={renewpassword} onchange={(e) => setReNewPassword(e.target.value)} />
+          <InputPass Placeholder="Repeat New Password" />
           <br />
           <br />
           <br />
-          {/* <Link to="/profile" style={{ textDecoration: "none" }}> */}
-          <Button Name="Change Password" onclick={onSubmit} />
-
-          {/* </Link> */}
+          <Link to="/profile" style={{ textDecoration: "none" }}>
+            <Button Name="Change Password" />
+          </Link>
         </CenterWrapper>
-        <ToastContainer />
       </MainContent>
     </LayoutHome>
   );
