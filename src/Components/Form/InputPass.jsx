@@ -20,7 +20,7 @@ const InputPass = (props) => {
   return (
     <LabelText>
       <FontAwesomeIcon icon={faLock}></FontAwesomeIcon>
-      <Passc type={type} maxLength="8" placeholder={props.Placeholder}></Passc>
+      <Passc type={type} minLength="8" maxLength="20" placeholder={props.placeholder} value={props.value} id={props.id} onChange={props.onchange} name={props.name}></Passc>
       <FontAwesomeIcon onClick={HandleToggle} icon={icon}></FontAwesomeIcon>
     </LabelText>
   );
