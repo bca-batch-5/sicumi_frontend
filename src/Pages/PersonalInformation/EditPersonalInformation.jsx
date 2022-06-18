@@ -8,6 +8,7 @@ import Button from "../../Components/Button/Button";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { updateInfoAPI } from "../../Services/Users";
+import { MainContent } from "../ChangePhone/StyledChangePhone";
 
 const EditPersonalInformation = () => {
   const [firstname, setFirstName] = useState("");
@@ -52,38 +53,42 @@ const EditPersonalInformation = () => {
 
   return (
     <LayoutHome>
-      <Wrappers>
-        <TagInformation Title=" Edit Your Personal Information" Desc="We got your personal information from the sign up proccess.But you could edit your data here" />
-      </Wrappers>
-      <Manage>
-        <Mwrapper>
-          <Title>First Name</Title>
-          <Desc>
-            <Input type="type" placeholder="Enter your first name" onChange={(e) => setFirstName(e.target.value)} value={firstname}></Input>
-          </Desc>
-        </Mwrapper>
-      </Manage>
-      <Manage>
-        <Mwrapper>
-          <Title>Last Name</Title>
-          <Desc>
-            <Input type="type" placeholder="Enter your last name" onChange={(e) => setLastName(e.target.value)} value={lastname}></Input>
-          </Desc>
-        </Mwrapper>
-      </Manage>
-      <Manage>
-        <Mwrapper>
-          <Title>Email</Title>
-          <Desc>
-            <Input type="type" placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)} value={email}></Input>
-          </Desc>
-        </Mwrapper>
-      </Manage>
+      <MainContent>
+        <Wrappers>
+          <TagInformation Title=" Edit Your Personal Information" Desc="We got your personal information from the sign up proccess.But you could edit your data here" />
+        </Wrappers>
+        <Manage>
+          <Mwrapper>
+            <Title>First Name</Title>
+            <Desc>
+              <Input type="type" placeholder="Enter your first name" onChange={(e) => setFirstName(e.target.value)} value={firstname}></Input>
+            </Desc>
+          </Mwrapper>
+        </Manage>
+        <Manage>
+          <Mwrapper>
+            <Title>Last Name</Title>
+            <Desc>
+              <Input type="type" placeholder="Enter your last name" onChange={(e) => setLastName(e.target.value)} value={lastname}></Input>
+            </Desc>
+          </Mwrapper>
+        </Manage>
+        <Manage>
+          <Mwrapper>
+            <Title>Email</Title>
+            <Desc>
+              <Input type="type" placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)} value={email}></Input>
+            </Desc>
+          </Mwrapper>
+        </Manage>
 
-      <CenterWrapper>
-        <Button Name="Save" onclick={onSubmit} />
-        <ToastContainer />
-      </CenterWrapper>
+        <CenterWrapper>
+          <Button Name="Save" onclick={onSubmit} />
+          <ToastContainer />
+        </CenterWrapper>
+        <br />
+        <br />
+      </MainContent>
     </LayoutHome>
   );
 };

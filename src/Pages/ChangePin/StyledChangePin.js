@@ -36,3 +36,10 @@ color:#5f3dc4;
     color: #5f3dc4;
 
 `;
+export const MainContent = styled.section`
+  background-color: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 40px;
+`;

@@ -10,6 +10,7 @@ import { faPencil } from "@fortawesome/free-solid-svg-icons";
 
 import "react-toastify/dist/ReactToastify.css";
 import { getUserByIdAPI } from "../../Services/Users";
+import { MainContent } from "../ChangePhone/StyledChangePhone";
 
 const PersonalInformation = () => {
   const [firstname, setfirstname] = useState("");
@@ -32,46 +33,47 @@ const PersonalInformation = () => {
   }, []);
   return (
     <LayoutHome>
-      <Wrappers>
-        <TagInformation Title="Personal Information" Desc="We got your personal information from the sign up proccess. If you want to make changes on your information, you can click 'edit'" />
-      </Wrappers>
-      <section style={{ margin: 10 }}>
-        <FontAwesomeIcon icon={faPencil} style={{ paddingRight: 10 }}></FontAwesomeIcon>
-        <Link to="/edit" style={{ textDecoration: "none", paddingRight: 50, paddingTop: 15, fontSize: 14 }}>
-          Edit
-        </Link>
-      </section>
+      <MainContent>
+        <Wrappers>
+          <TagInformation Title="Personal Information" Desc="We got your personal information from the sign up proccess. If you want to make changes on your information, you can click 'edit'" />
+        </Wrappers>
+        <section style={{ margin: 10 }}>
+          <FontAwesomeIcon icon={faPencil} style={{ paddingRight: 10 }}></FontAwesomeIcon>
+          <Link to="/edit" style={{ textDecoration: "none", paddingRight: 50, paddingTop: 15, fontSize: 14 }}>
+            Edit
+          </Link>
+        </section>
 
-      <Manage>
-        <Mwrapper>
-          <Title>First Name</Title>
-          <Desc onChange={(e) => setfirstname(e.target.value)}>{firstname}</Desc>
-        </Mwrapper>
-      </Manage>
-      <Manage>
-        <Mwrapper>
-          <Title>Last Name</Title>
-          <Desc onChange={(e) => setLastName(e.target.value)}>{lastname}</Desc>
-        </Mwrapper>
-      </Manage>
-      <Manage>
-        <Mwrapper>
-          <Title>Email</Title>
-          <Desc type="email" onChange={(e) => setEmail(e.target.value)}>
-            {email}
-          </Desc>
-        </Mwrapper>
-      </Manage>
-      <Manage>
-        <Mwrapper>
-          <Title>Phone Number</Title>
-          <Desc>{phone}</Desc>
-        </Mwrapper>
-        <Link to="/managephone" style={{ textDecoration: "none", paddingRight: 50, paddingTop: 15, fontSize: 14 }}>
-          Manage
-        </Link>
-      </Manage>
-      <CenterWrapper></CenterWrapper>
+        <Manage>
+          <Mwrapper>
+            <Title>First Name</Title>
+            <Desc onChange={(e) => setfirstname(e.target.value)}>{firstname}</Desc>
+          </Mwrapper>
+        </Manage>
+        <Manage>
+          <Mwrapper>
+            <Title>Last Name</Title>
+            <Desc onChange={(e) => setLastName(e.target.value)}>{lastname}</Desc>
+          </Mwrapper>
+        </Manage>
+        <Manage>
+          <Mwrapper>
+            <Title>Email</Title>
+            <Desc type="email" onChange={(e) => setEmail(e.target.value)}>
+              {email}
+            </Desc>
+          </Mwrapper>
+        </Manage>
+        <Manage>
+          <Mwrapper>
+            <Title>Phone Number</Title>
+            <Desc>{phone}</Desc>
+          </Mwrapper>
+          <Link to="/managephone" style={{ textDecoration: "none", paddingRight: 50, paddingTop: 15, fontSize: 14 }}>
+            Manage
+          </Link>
+        </Manage>
+      </MainContent>
     </LayoutHome>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LayoutHome from "../../Layouts/Home/Home";
-import { Wrappers, CenterWrapper, PinWrapper, InputHolder, Input } from "./StyledChangePin";
+import { Wrappers, CenterWrapper, PinWrapper, InputHolder, Input, MainContent } from "./StyledChangePin";
 import TagInformation from "../../Components/TextBox/TagInformation";
 import Button from "../../Components/Button/Button";
 import { updatePinAPI } from "../../Services/Users";
@@ -60,40 +60,45 @@ const ChangePin = () => {
   };
   return (
     <LayoutHome>
-      <Wrappers>
-        <TagInformation Title="Change PIN" Desc="Enter your current 6 digits Sicumi PIN below to continue to the next steps." />
-      </Wrappers>
-      <br />
-      <br />
-      <CenterWrapper>
-        <PinWrapper>
-          <InputHolder>
-            <Input type="number" min="0" onChange={(e) => setPin1(e.target.value)} value={pin1} />
-          </InputHolder>
-          <InputHolder>
-            <Input type="number" min="0" maxLength="1" onChange={(e) => setPin2(e.target.value)} value={pin2} />
-          </InputHolder>
-          <InputHolder>
-            <Input type="number" min="0" maxLength="1" onChange={(e) => setPin3(e.target.value)} value={pin3} />
-          </InputHolder>
-          <InputHolder>
-            <Input type="number" min="0" maxLength="1" onChange={(e) => setPin4(e.target.value)} value={pin4} />
-          </InputHolder>
-          <InputHolder>
-            <Input type="number" min="0" maxLength="1" onChange={(e) => setPin5(e.target.value)} value={pin5} />
-          </InputHolder>
-          <InputHolder>
-            <Input type="number" min="0" maxLength="1" onChange={(e) => setPin6(e.target.value)} value={pin6} />
-          </InputHolder>
-        </PinWrapper>
-        <br />
+      <MainContent>
+        <Wrappers>
+          <TagInformation Title="Change PIN" Desc="Enter your current 6 digits Sicumi PIN below to continue to the next steps." />
+        </Wrappers>
         <br />
         <br />
         <CenterWrapper>
-          <Button Name="Change PIN" onclick={onSubmit} />
+          <PinWrapper>
+            <InputHolder>
+              <Input type="number" min="0" onChange={(e) => setPin1(e.target.value)} value={pin1} />
+            </InputHolder>
+            <InputHolder>
+              <Input type="number" min="0" maxLength="1" onChange={(e) => setPin2(e.target.value)} value={pin2} />
+            </InputHolder>
+            <InputHolder>
+              <Input type="number" min="0" maxLength="1" onChange={(e) => setPin3(e.target.value)} value={pin3} />
+            </InputHolder>
+            <InputHolder>
+              <Input type="number" min="0" maxLength="1" onChange={(e) => setPin4(e.target.value)} value={pin4} />
+            </InputHolder>
+            <InputHolder>
+              <Input type="number" min="0" maxLength="1" onChange={(e) => setPin5(e.target.value)} value={pin5} />
+            </InputHolder>
+            <InputHolder>
+              <Input type="number" min="0" maxLength="1" onChange={(e) => setPin6(e.target.value)} value={pin6} />
+            </InputHolder>
+          </PinWrapper>
+          <br />
+          <br />
+          <br />
+          <br />
+          <CenterWrapper>
+            <Button Name="Change PIN" onclick={onSubmit} />
+          </CenterWrapper>
         </CenterWrapper>
-      </CenterWrapper>
-      <ToastContainer />
+        <br />
+        <br />
+        <ToastContainer />
+      </MainContent>
     </LayoutHome>
   );
 };

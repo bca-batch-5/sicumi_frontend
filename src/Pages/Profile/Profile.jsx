@@ -7,6 +7,7 @@ import ButtonwArrow from "../../Components/Button/ButtonwArrow";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import { getUserByIdAPI, loadFileAPI, uploadFileAPI } from "../../Services/Users";
+import { MainContent } from "../ChangePhone/StyledChangePhone";
 
 const Profile = () => {
   const [phone, setPhone] = useState("");
@@ -53,38 +54,41 @@ const Profile = () => {
 
   return (
     <LayoutHome>
-      <Wrappers>
-        <img // boolean ? true : false
-          src={photo ? photo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0m5Cy4lXCbuyG54L0vuo3i5-ALavHe9KmhWA_wDM&s"}
-          alt="profilepict"
-          width={80}
-          style={{
-            display: "center",
-            borderRadius: `10px`,
-          }}
-        />
-        <DescAcc>
-          <Link to="/Editimage" style={{ fontSize: 12, textDecoration: "none" }}>
-            <FontAwesomeIcon icon={faPencil} style={{ paddingRight: 10 }} />
-            Edit
-          </Link>
+      <MainContent>
+        <Wrappers>
+          <img // boolean ? true : false
+            src={photo ? photo : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0m5Cy4lXCbuyG54L0vuo3i5-ALavHe9KmhWA_wDM&s"}
+            alt="profilepict"
+            width={80}
+            style={{
+              display: "center",
+              borderRadius: `10px`,
+            }}
+          />
+          <DescAcc>
+            <Link to="/Editimage" style={{ fontSize: 12, textDecoration: "none" }}>
+              <FontAwesomeIcon icon={faPencil} style={{ paddingRight: 10 }} />
+              Edit
+            </Link>
 
-          <NameAcc> {fullname}</NameAcc>
-          <PhoneAcc>{phone}</PhoneAcc>
-        </DescAcc>
-        <Link to="/PersonalInformation" style={{ textDecoration: "none" }}>
-          <ButtonwArrow Name="Personal information" />
-        </Link>
-        <Link to="/ChangePassword" style={{ textDecoration: "none" }}>
-          <ButtonwArrow Name="Change Password" />
-        </Link>
-        <Link to="/ChangePin" style={{ textDecoration: "none" }}>
-          <ButtonwArrow Name="Change Pin" />
-        </Link>
-        <Link to="" style={{ textDecoration: "none" }}>
-          <Button Name="Log Out" />
-        </Link>
-      </Wrappers>
+            <NameAcc> {fullname}</NameAcc>
+            <PhoneAcc>{phone}</PhoneAcc>
+          </DescAcc>
+          <Link to="/PersonalInformation" style={{ textDecoration: "none" }}>
+            <ButtonwArrow Name="Personal information" />
+          </Link>
+          <Link to="/ChangePassword" style={{ textDecoration: "none" }}>
+            <ButtonwArrow Name="Change Password" />
+          </Link>
+          <Link to="/ChangePin" style={{ textDecoration: "none" }}>
+            <ButtonwArrow Name="Change Pin" />
+          </Link>
+          <Link to="" style={{ textDecoration: "none" }}>
+            <Button Name="Log Out" />
+          </Link>
+        </Wrappers>
+        <br />
+      </MainContent>
     </LayoutHome>
   );
 };

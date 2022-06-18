@@ -57,12 +57,6 @@ export const SectionRight = styled.section`
   width: 60%;
   height: 70vh;
   margin-right: 10%;
-  //
-  background-color: white;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
-  border: 1px solid white;
-  border-radius: 25px;
-  padding: 40px;
 `;
 
 export const DescAcc = styled.section`
