@@ -133,7 +133,7 @@ export const List = styled.section`
   &:focus,
   &:active {
     opacity: 100%;
-    color : #5f3dc4;
+    color: #5f3dc4;
     border-left: 5px solid #5f3dc4;
   }
 `;
