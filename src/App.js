@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import * as fcl from "@onflow/fcl";
 
 function App() {
   return (
