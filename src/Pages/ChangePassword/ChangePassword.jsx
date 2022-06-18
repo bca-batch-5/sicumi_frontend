@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LayoutHome from "../../Layouts/Home/Home";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Wrappers, CenterWrapper, MainContent } from "./StyledChangePassword";
 import TagInformation from "../../Components/TextBox/TagInformation";
 // import DetailsInformation from "../../Components/TextBox/DetailsInformation";
@@ -57,7 +57,10 @@ const ChangePassword = () => {
     <LayoutHome>
       <MainContent>
         <Wrappers>
-          <TagInformation Title="Change Password" Desc="You must enter your current password and then type your new password twice." />
+          <TagInformation
+            Title="Change Password"
+            Desc="You must enter your current password and then type your new password twice."
+          />
         </Wrappers>
         <CenterWrapper>
           <InputPass Placeholder="Current Password" />
