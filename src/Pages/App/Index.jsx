@@ -4,7 +4,6 @@ import LayoutHome from "../../Layouts/Home/Home";
 import "../../Styles/App.css";
 import Dashboard from "../Dashboard/Dashboard";
 import History from "../History/History";
-import SingUp from "../SignUp/SignUp";
 import Contact from "../Contact/Contact";
 import Transfer from "../Transfer/Transfer";
 import Confirmation from "../Confirmation/Confirmation"
@@ -38,7 +37,7 @@ const App = () => {
         <Route path="/Reset" element={<ResetPage />} />
         <Route path="/Reset/Confirm/:id" element={<ResetPassPage />} />
         <Route path="/Layout" element={<LayoutHome />} />
-        <Route path="/Signup" element={<SingUp />} />
+
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/History" element={<History />} />
         <Route path="/Contact" element={<Contact />} />

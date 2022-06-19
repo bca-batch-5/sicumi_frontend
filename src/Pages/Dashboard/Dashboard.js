@@ -23,7 +23,9 @@ import {
 import Chart from "../Chart/Index";
 import DetailsInformation from "../../Components/TextBox/DetailsInformation";
 import HistoryInformation from "../../Components/TextBox/HistoryInformation";
-import { getDetailAPI } from "../../Service/User";
+import { getDetailAPI } from "../../Services/User";
+import NumberFormat from "react-number-format";
+
 
 const Dashboard = () => {
   const [balance, setBalance] = useState("");
@@ -32,8 +34,9 @@ const Dashboard = () => {
   const getDetailByUserId = async (e) => {
     const res = await getDetailAPI();
     console.log("res get by id", res);
-    setBalance(res.data.balance);
-    setPhone(res.data.phone);
+    setBalance(res.data.data.balance);
+    setPhone(res.data.data.phone);
+    console.log("saldo", balance);
   };
 
   useEffect(() => {
@@ -46,7 +49,16 @@ const Dashboard = () => {
         <BalanceInformation>
           <BILeft>
             <DescBalance>Balance</DescBalance>
-            <ShowBalance onChange={(e)=> setBalance (e.target.value)}>{balance} </ShowBalance>
+            <ShowBalance><NumberFormat
+                  thousandsGroupStyle="thousand"
+                  value={balance}
+                  prefix="Rp "
+                  decimalSeparator=","
+                  displayType="text"
+                  type="text"
+                  thousandSeparator="."
+                  allowNegative={true}
+                /></ShowBalance>
             <DescBalance onChange={(e)=> setPhone (e.target.value)}>{phone}</DescBalance>
           </BILeft>
           <BIRight>
