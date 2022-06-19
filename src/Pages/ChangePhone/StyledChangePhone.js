@@ -1,4 +1,17 @@
 import styled from "styled-components";
+
+export const Wrappers = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+`;
+
+export const CenterWrapper = styled.section`
+  width: 40%;
+  margin-left: 30%;
+  align-items: center;
+`;
 export const LabelText = styled.label`
   margin-top: 2rem;
   display: flex;
@@ -13,8 +26,8 @@ export const LabelText = styled.label`
   }
 `;
 
-export const Passc = styled.input`
-  width: 300px;
+export const Unc = styled.input`
+  width: 320px;
   margin-left: 1rem;
   display: flex;
   border: none;
