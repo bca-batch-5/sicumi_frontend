@@ -20,6 +20,25 @@ useEffect(() => {
   getAllContact();
 },[]);
 
+// const LinkTo =(props) =>{
+//   const {Title, Desc} = props;
+//   const [display, setDisplay] = useState("block");
+// }
+//   function moveToLocal(){
+//     localStorage.setItem("phone", Desc);
+
+//     useEffect(() => {
+//       checkDisplay();
+//     }, [])
+    
+//     function checkDisplay(){
+//       if (Desc === getPhone()) {
+//         setDisplay("none")
+  
+//     }
+//   }
+// }
+
   return (
     <LayoutHome>
       <MainContent>
@@ -29,8 +48,8 @@ useEffect(() => {
         <YWrapp>
           {detailUser.map((el) =>{
           return (
-            <Link to="/transfer" style={{textDecoration : `none`}}>
-              <ContactInformation Title={el.firstname} Desc={el.phone}></ContactInformation>
+            <Link to="/transfer"  style={{textDecoration : `none`}}>
+              <ContactInformation userId={el.userId} photo={el.photo} subTitle={el.firstname} subDesc={el.phone}></ContactInformation>
             </Link>
           );
           

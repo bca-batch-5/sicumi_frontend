@@ -35,7 +35,7 @@ const Form = (props) => {
               token: respLogin.data.data.token,
             })
           );
-          navigate("/");
+          navigate("/dashboard");
         } else if (respLogin.data.status === 404) {
           props.setAlert(respLogin.data.message);
         } else {

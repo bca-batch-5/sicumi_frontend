@@ -1,9 +1,10 @@
 import fetchAPI, { getHeaders, getUserId } from "../Config/FetchAxios";
 
 const ROOT_API_USER = process.env.REACT_APP_API_USER;
+const ROOT_API_SICUMI = process.env.REACT_APP_API_SICUMI;
 
 export const getUserAPI = async (data) => {
-  const url = `${ROOT_API_USER}/user/signin`;
+  const url = `${ROOT_API_USER}/signin`;
 
   const responseAxios = await fetchAPI({
     url,
@@ -15,7 +16,7 @@ export const getUserAPI = async (data) => {
 };
 
 export const checkEmailAPI = async (data) => {
-  const url = `${ROOT_API_USER}/user/check`;
+  const url = `${ROOT_API_USER}/check`;
 
   const responseAxios = await fetchAPI({
     url,
@@ -26,7 +27,7 @@ export const checkEmailAPI = async (data) => {
 };
 
 export const addUserAPI = async (data) => {
-  const url = `${ROOT_API_USER}/user/signup`;
+  const url = `${ROOT_API_USER}/signup`;
 
   const responseAxios = await fetchAPI({
     url,
@@ -37,7 +38,7 @@ export const addUserAPI = async (data) => {
 };
 
 export const findEmailAPI = async (data) => {
-  const url = `${ROOT_API_USER}/user/find`;
+  const url = `${ROOT_API_USER}/find`;
 
   const responseAxios = await fetchAPI({
     url,
@@ -48,7 +49,7 @@ export const findEmailAPI = async (data) => {
 };
 
 export const newPasswordAPI = async (data) => {
-  const url = `${ROOT_API_USER}/user/resetpassword`;
+  const url = `${ROOT_API_USER}/resetpassword`;
 
   const responseAxios = await fetchAPI({
     url,
@@ -61,7 +62,7 @@ export const newPasswordAPI = async (data) => {
 export const getDetailAPI = async(data) => {
   const headers = getHeaders();
   const userId= getUserId();
-  const url = `${ROOT_API_USER}/DetailUser/${userId}`
+  const url = `${ROOT_API_SICUMI}/detailuser/${userId}`
 
   const responseAxios = await fetchAPI({
       url,
@@ -76,7 +77,7 @@ export const getDetailAPI = async(data) => {
 export const updateBalanceAPI = async(data)=>{
   const headers = getHeaders();
   const userId= getUserId();
-  const url = `${ROOT_API_USER}/DetailUser/update/`
+  const url = `${ROOT_API_SICUMI}/detailuser/update/${userId}`
 
   const responseAxios =await fetchAPI({
       url,
@@ -87,10 +88,10 @@ export const updateBalanceAPI = async(data)=>{
   return responseAxios;
 };
 
-export const getTransferBySenderAPI = async(data) => {
+export const createTransferAPI = async(data) => {
   const headers = getHeaders();
   const userId= getUserId();
-  const url = `${ROOT_API_USER}/transaction`
+  const url = `${ROOT_API_SICUMI}/transaction/${userId}`
 
   const responseAxios = await fetchAPI({
       url,
@@ -104,7 +105,7 @@ export const getTransferBySenderAPI = async(data) => {
 export const getAllTransactionAPI = async(data) => {
   const headers = getHeaders();
   const userId= getUserId();
-  const url = `${ROOT_API_USER}/transaction`
+  const url = `${ROOT_API_SICUMI}/transaction/${userId}`
 
   const responseAxios = await fetchAPI ({
       url,
@@ -118,7 +119,7 @@ export const getAllTransactionAPI = async(data) => {
 export const getTransactionDialyAPI= async(data) => {
   const headers = getHeaders();
   const userId= getUserId();
-  const url = `${ROOT_API_USER}/transaction/alltrans`
+  const url = `${ROOT_API_SICUMI}/transaction/alltrans`
 
   const responseAxios =await fetchAPI({
       url, 
@@ -131,7 +132,7 @@ export const getTransactionDialyAPI= async(data) => {
 
 export const getContactAPI = async(data) => {
   const headers = getHeaders();
-  const url = `${ROOT_API_USER}/detailuser`
+  const url = `${ROOT_API_SICUMI}/detailuser`
 
   const responseAxios = await fetchAPI({
     url,
@@ -145,7 +146,7 @@ export const getContactAPI = async(data) => {
 export const createTopUpAPI = async(data) => {
   const headers = getHeaders();
   const userId= getUserId();
-  const url = `${ROOT_API_USER}/topup`
+  const url = `${ROOT_API_SICUMI}/topup`
 
   const responseAxios= await fetchAPI({
     url,
@@ -156,6 +157,32 @@ export const createTopUpAPI = async(data) => {
   return responseAxios;
 };
 
+export const getReceiverAPI = async(userId) => {
+  const getUserId= userId;
+  const url = `${ROOT_API_SICUMI}/detailuser/${getUserId}`;
+  const headers = getHeaders();
+
+  const responseAxios = await fetchAPI({
+    url, 
+    method :"get",
+    headers,
+  });
+  return responseAxios;
+};
+
+export const checkPin = async(data) =>{
+  const userId= getUserId();
+  const url = `${ROOT_API_SICUMI}/user/${userId}`;
+  const headers = getHeaders();
+
+  const responseAxios = await fetchAPI({
+    url,
+    method : "get",
+    data,
+    headers,
+  });
+return responseAxios;
+};
 
 
 

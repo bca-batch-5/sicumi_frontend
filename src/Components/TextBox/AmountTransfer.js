@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { AddNote, LabelAmount, LabelNote, Lamt, ShowBalance, Wrapper } from "./styleAmountTransfer";
 
-const AmountTransfer =(props) => {
+const AmountTransfer =() => {
     return(
         <Wrapper>
             <LabelAmount>
                 <Lamt type=""  placeholder="0.00"></Lamt>
             </LabelAmount>
-            <ShowBalance>{props.ShowBalance}</ShowBalance>
+            <ShowBalance></ShowBalance>
             <LabelNote>
             <FontAwesomeIcon icon={faPencil}></FontAwesomeIcon>
                 <AddNote>
